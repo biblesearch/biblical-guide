@@ -12,7 +12,7 @@ exports.handler = async function(event) {
 
 QUESTION: ${question}`;
 
-  const apiKey = "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";
+  const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 
   const response = await fetch("https://api.openai.com/v1/chat/completions", {
     method: "POST",
